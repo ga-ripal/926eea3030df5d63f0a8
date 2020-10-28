@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "a4cc61cd-3718-455f-971c-fa5365ab717a",
+		"name": "exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"xyz\",\r\n    \"lastName\":\"xys\",\r\n    \"email\":\"xyz@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8203/api/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8203",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				},
+				"description": "User need to pass following data in body section\r\n\r\n{\r\n    \"firstName\":\"gallelio\",\r\n    \"lastName\":\"gaillel\",\r\n    \"email\":\"galeleio@gmail.com\"\r\n}\r\n\r\nIf user does not exists than it will give sucess response otherwise failure message will be displayed"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL USERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8203/api/v1/users?search=gallelio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8203",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "gallelio"
+						},
+						{
+							"key": "pageNo",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				},
+				"description": "User need to pass querry params as per requirement of result\r\nIf Serach will be Passed as query \r\nThan it will return result success if searched result eill be found otherwise failure message will be displayed\r\n\r\nif any of querry param is not passed than it will return all data exsisted in database"
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8203/api/v1/user/5f997e92aa27e41db4f71fdb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8203",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"5f997e92aa27e41db4f71fdb"
+					]
+				},
+				"description": "User needs to pass Id of particular user \r\nIf Id will be found than it will return with success result otherwise failure message will be displayed"
+			},
+			"response": []
+		},
+		{
+			"name": "EDIT USER",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"gallelio\",\r\n    \"lastName\":\"gaillel\",\r\n    \"email\":\"galeleio@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8203/api/v1/user/5f997e92aa27e41db4f71fdb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8203",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"5f997e92aa27e41db4f71fdb"
+					]
+				},
+				"description": "User needs to pass Id of particular user \r\nand pass data you want to modify in req. body \r\nIf data is modified  than it will return with success result otherwise failure message will be displayed"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8203/api/v1/user/5f997e92aa27e41db4f71fdb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8203",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"5f997e92aa27e41db4f71fdb"
+					]
+				},
+				"description": "User needs to pass Id of particular user \r\nIf Id will be found and deleted than it will return with success result otherwise failure message will be displayed"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

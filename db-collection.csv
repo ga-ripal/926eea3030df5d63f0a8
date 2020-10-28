@@ -1,0 +1,6 @@
+_id,firstName,lastName,email,createdAt,updatedAt,__v,seq
+5f997e92aa27e41db4f71fdb,xyz,xys,xyz@gmail.com,2020-10-28T14:22:10.519Z,2020-10-28T14:22:10.519Z,0,0
+5f99822d8616c0427c02fd72,albert,einstine,albert@gmail.com,2020-10-28T14:37:33.121Z,2020-10-28T14:37:33.121Z,0,
+5f99824e8616c0427c02fd73,marrie,quriee,marry@gmail.com,2020-10-28T14:38:06.447Z,2020-10-28T14:38:06.447Z,0,
+5f9982618616c0427c02fd74,isac,newton,isac@gmail.com,2020-10-28T14:38:25.059Z,2020-10-28T14:38:25.059Z,0,
+5f99827c8616c0427c02fd75,gallelio,gaillel,galeleio@gmail.com,2020-10-28T14:38:52.013Z,2020-10-28T14:38:52.013Z,0,
